@@ -1,0 +1,12 @@
+{
+  "name": "event-handler-98c48b",
+  "version": "1.6.0",
+  "description": "A event-handler utility",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["event-handler", "utility"],
+  "license": "MIT"
+}

